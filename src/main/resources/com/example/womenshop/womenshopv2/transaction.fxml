@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.womenshop.womenshopv2.TransactionHistoryController">
+    <Label text="Transaction History" style="-fx-font-size: 24px;"/>
+
+    <TableView fx:id="transactionTableView">
+        <columns>
+            <TableColumn fx:id="transactionIdColumn" text="Transaction ID" />
+            <TableColumn fx:id="productIdColumn" text="Product ID" />
+            <TableColumn fx:id="transactionTypeColumn" text="Transaction Type" />
+            <TableColumn fx:id="dateColumn" text="Transaction Date" />
+            <TableColumn fx:id="quantityColumn" text="Quantity" />
+            <TableColumn fx:id="totalPriceColumn" text="Unit price" />
+        </columns>
+    </TableView>
+
+    <Button text="Back to Admin View" onAction="#onBackToAdminViewClick"/>
+</VBox>

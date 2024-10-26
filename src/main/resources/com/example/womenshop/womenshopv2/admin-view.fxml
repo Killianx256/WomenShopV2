@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <?import javafx.geometry.*?>
+    <?import javafx.scene.control.*?>
+    <?import javafx.scene.layout.*?>
+    <?import javafx.scene.text.*?>
+
+    <VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.womenshop.womenshopv2.AdminController" spacing="20" alignment="CENTER" style="-fx-background-color: #f4f4f4; -fx-padding: 30; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+        <Label text="Admin View" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+        <VBox spacing="10" alignment="CENTER" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-color: #dcdcdc; -fx-border-radius: 8; -fx-background-radius: 8;">
+            <Label text="Financial information" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Label fx:id="financialInfoLabel" style="-fx-font-size: 14px;" />
+        </VBox>
+
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Select a category:" style="-fx-font-size: 16px;" />
+            <ComboBox fx:id="categoryComboBox" promptText="Select category" prefWidth="250" style="-fx-font-size: 14px;" />
+        </VBox>
+
+        <TableView fx:id="stockTableView" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #ffffff; -fx-border-color: #dcdcdc; -fx-border-radius: 8;">
+            <columns>
+                <TableColumn fx:id="productIdColumn" text="Product ID" />
+                <TableColumn fx:id="nameColumn" text="Name" />
+                <TableColumn fx:id="categoryIdColumn" text="Category ID" />
+                <TableColumn fx:id="stockColumn" text="Stock" />
+                <TableColumn fx:id="purchasePriceColumn" text="Purchase Price" />
+                <TableColumn fx:id="sellPriceColumn" text="Sell Price" />
+                <TableColumn fx:id="shoeSizeColumn" text="Shoe Size" />
+                <TableColumn fx:id="clothingSizeColumn" text="Clothing Size" />
+                <TableColumn fx:id="discountPriceColumn" text="Discount (%)" />
+            </columns>
+        </TableView>
+
+    <GridPane hgap="20" vgap="15" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Button fx:id="addProductButton" text="Add a new product" GridPane.rowIndex="0" GridPane.columnIndex="0" maxWidth="200" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onAddProductButtonClick" />
+        <Button fx:id="addStockButton" text="Add stock to a product" GridPane.rowIndex="1" GridPane.columnIndex="0" maxWidth="200" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onAddStock" />
+        <Button fx:id="sellProductButton" text="Sell a product" GridPane.rowIndex="2" GridPane.columnIndex="0" maxWidth="200" style="-fx-background-color: #008CBA; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onSellProduct"/>
+        <Button fx:id="DeleteProduct" text="Delete a product" GridPane.rowIndex="3" GridPane.columnIndex="0" maxWidth="200" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onDeleteProduct" />
+²
+        <Button fx:id="applyDiscountButton" text="Apply a discount" GridPane.rowIndex="0" GridPane.columnIndex="1" maxWidth="200" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onApplyDiscountButtonClick" />
+        <Button fx:id="removeDiscountButton" text="Remove a discount" GridPane.rowIndex="1" GridPane.columnIndex="1" maxWidth="200" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onRemoveDiscountButtonClick" />
+        <Button fx:id="editProductButton" text="Edit a product" GridPane.rowIndex="2" GridPane.columnIndex="1" maxWidth="200" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onEditProductButtonClick" />
+        <Button fx:id="seeTransactionHistoryButton" text="See Transaction History" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="200" style="-fx-background-color: #607D8B; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onViewTransaction" />
+    </GridPane>
+
+
+    <HBox alignment="CENTER">
+            <Button fx:id="backToWelcomePageButton" text="Back to welcome page" maxWidth="200" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 20; -fx-border-radius: 5;" onAction="#onBackToWelcomePageButtonClick" />
+        </HBox>
+    </VBox>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.womenshop.womenshopv2.EditProductController" alignment="CENTER" spacing="15" style="-fx-background-color: #f4f4f4; -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10; ">
+    <Label text="Edit Product" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <TextField fx:id="nameField" promptText="Product Name" style="-fx-font-size: 14px; -fx-padding: 10;" editable="false" />
+    <TextField fx:id="purchasePriceField" promptText="Purchase Price" style="-fx-font-size: 14px; -fx-padding: 10;"/>
+    <TextField fx:id="sellPriceField" promptText="Sell Price" style="-fx-font-size: 14px; -fx-padding: 10;"/>
+    <TextField fx:id="stockField" promptText="Stock" style="-fx-font-size: 14px; -fx-padding: 10;"/>
+    <TextField fx:id="sizeField" promptText="Size (if applicable)" style="-fx-font-size: 14px; -fx-padding: 10;"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id ="saveButton" text="Save Changes" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10;" onAction="#onSaveChangesButtonClick"/>
+        <Button fx:id ="cancelButton" text="Cancel" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10;" onAction="#onCancelButtonClick"/>
+    </HBox>
+</VBox>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.womenshop.womenshopv2.ApplyDiscountController" alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+
+    <Label text="Apply Discount" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <ComboBox fx:id="productComboBox" promptText="Select Product" prefWidth="200" onAction="#onProductSelected" />
+
+    <VBox spacing="10" alignment="CENTER" fx:id="productInfoBox" visible="false">
+        <Label fx:id="productNameLabel" text="Product Name: " />
+        <Label fx:id="productPriceLabel" text="Price: " />
+        <Label fx:id="productStockLabel" text="Stock: " />
+    </VBox>
+
+    <TextField fx:id="discountPercentageField" promptText="Enter discount percentage" prefWidth="200" />
+
+    <Button text="Apply Discount" onAction="#onApplyDiscountButtonClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+
+    <Button fx:id="cancelButton" text="Cancel" onAction="#onCancelButtonClick" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+
+</VBox>

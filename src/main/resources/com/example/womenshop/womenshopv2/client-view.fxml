@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.womenshop.womenshopv2.ClientController" style="-fx-padding: 30; -fx-background-color: #f4f4f4; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <Label text="Client View" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <VBox spacing="10" alignment="CENTER" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-color: #dcdcdc; -fx-border-radius: 8; -fx-background-radius: 8;">
+        <Label text="Financial information" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Label fx:id="financialInfoLabel" text="Capital, global income, global cost" style="-fx-font-size: 14px;" />
+    </VBox>
+
+    <VBox spacing="10" alignment="CENTER">
+        <ComboBox fx:id="categoryComboBox" promptText="Choisissez une catégorie" prefWidth="250" style="-fx-font-size: 14px; -fx-padding: 10;" />
+        <ComboBox fx:id="productComboBox" promptText="Choisissez un produit" prefWidth="250" style="-fx-font-size: 14px; -fx-padding: 10;" onAction="#onProductSelected"/>
+    </VBox>
+
+    <TextField fx:id="quantityTextField" promptText="Quantité" prefWidth="250" style="-fx-font-size: 14px; -fx-padding: 10;" onKeyReleased="#updateTotalPrice" />
+
+    <Label fx:id="totalPriceLabel" text="Prix Total : 0.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <Button fx:id="confirmPurchaseButton" text="Confirmer l'achat" onAction="#onConfirmPurchase" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-border-radius: 5;" />
+
+    <Button fx:id="backToWelcomePageButton" text="Back to the menu" onAction="#onBackToWelcomePageButtonClick" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-border-radius: 5;" />
+
+</VBox>
